@@ -1,0 +1,16 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "apscheduler>=3.11.0",
+    "flask>=3.1.1",
+    "flask-cors>=6.0.1",
+    "flask-jwt-extended>=4.7.1",
+    "flask-restful>=0.3.10",
+    "flask-sqlalchemy>=3.1.1",
+    "peewee>=3.18.1",
+    "scheduler>=0.8.8",
+]
