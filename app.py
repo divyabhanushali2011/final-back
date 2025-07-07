@@ -4,7 +4,7 @@ from flask_cors import CORS
 from workout_api import WorkoutAPI,WorkoutDeleteAPI,WorkoutListAPI
 from models import db
 from routes import RegisterAPI, ProtectedAPI, DeleteUserAPI, ReminderAPI, LoginAPI, ForgotPasswordAPI
-
+import os
 app = Flask(__name__)
 
 # Enable CORS for SvelteKit frontend
@@ -26,4 +26,5 @@ api.add_resource(WorkoutListAPI, '/api/workouts')
 api.add_resource(WorkoutDeleteAPI, '/api/workout/<int:id>')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
