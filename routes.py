@@ -197,7 +197,7 @@ class ForgotPasswordAPI(Resource):
 # ✅ Workout Create & Fetch
 
 class WorkoutAPI(Resource):
-    @cross_origin(origins='http://localhost:5173', supports_credentials=True)
+    @cross_origin(origins='https://my-fronted-git-main-divyas-projects-031f9126.vercel.app', supports_credentials=True)
     def post(self):
         data = request.get_json()
         user_email = data.get('user_email')
@@ -231,7 +231,7 @@ class WorkoutAPI(Resource):
         except Exception as e:
             return {'error': f'Internal error: {str(e)}'}, 500
 
-    @cross_origin(origins='http://localhost:5173', supports_credentials=True)
+    @cross_origin(origins='https://my-fronted-git-main-divyas-projects-031f9126.vercel.app', supports_credentials=True)
     def get(self):
         email = request.args.get('email')
         print(f"📩 Fetching workouts for: {email}")
@@ -248,7 +248,7 @@ class WorkoutAPI(Resource):
             return {'error': f'Failed to fetch workouts: {str(e)}'}, 500
 # Workout Delete API
 class WorkoutDeleteAPI(MethodView):
-    @cross_origin(origins='http://localhost:5173')
+    @cross_origin(origins='https://my-fronted-git-main-divyas-projects-031f9126.vercel.app')
     def delete(self, workout_id):
         try:
             workout = Workout.get_or_none(Workout.id == workout_id)

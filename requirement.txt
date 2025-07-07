@@ -1,3 +1,4 @@
 Flask
 Flask-JWT-Extended
 peewee
+gunicorn

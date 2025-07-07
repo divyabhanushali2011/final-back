@@ -8,7 +8,7 @@ from routes import RegisterAPI, ProtectedAPI, DeleteUserAPI, ReminderAPI, LoginA
 app = Flask(__name__)
 
 # Enable CORS for SvelteKit frontend
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}}, supports_credentials=True)
+CORS(app, resources={r"/api/*": {"origins": "https://my-fronted-git-main-divyas-projects-031f9126.vercel.app"}}, supports_credentials=True)
 
 
 
